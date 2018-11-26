@@ -1,0 +1,559 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  a{text-decoration: none}
+  .router-link-active {
+    border-bottom:0.1rem #09f solid
+  }
+  .navBar a {
+    height: 100%;
+    width: 25%;
+    float: left;
+    color: #333;
+  
+    font-size: 0.7rem;
+    box-sizing: border-box
+    
+  }
+  .navBar {
+    height: 2rem;
+  
+    width: 100%;
+    line-height: 2rem;
+    text-align: center;
+       box-shadow: 0 0.1785rem 0.1785rem 0 #f4f4f4;
+    margin-bottom: 0.3rem
+  }
+  .v-enter{opacity: 0}
+  .v-enter-to{ opacity: 1}
+  .v-enter-active{ transition:.3s}
+  
+  
+  .v-leave{opacity: 1}
+  .v-leave-to{ opacity: 0}
+  .v-leave-active{ transition: .3s}
+  
+  .left-enter{ transform: translateX(100%)}
+  .left-enter-to{  transform: translateX(0%)}
+  .left-enter-active{ transition:1s}
+  
+  .left-leave{ transform: translateX(0%)}
+  .left-leave-to{  transform: translateX(100%)}
+  .left-leave-active{ transition:1s}
+  .routerViews{ position: absolute; width: 100%; }
+
+
+  
+.panel-img-list li a {
+    display: block;
+    position: relative;
+    margin-left: .7143rem;
+    padding: .7143rem 2.14286rem .7143rem 6rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+.panel-img-left {
+    position: absolute;
+    top: .7143rem;
+    left: 0;
+    width: 5.3751rem;
+    height: 5.3751rem;
+}
+.panel-img-content {
+    min-height: 5.3751rem;
+    line-height: 5.3751rem;
+    display: block;
+    font-size: .7rem;
+    color: #333;
+}
+.panel-img-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2.14286rem;
+    height: 100%;
+    text-align: center;
+    display: block;
+}
+.panel-img-arrow {
+    width: .57143rem;
+    height: 1rem;
+    margin-top: -.5rem;
+    position: absolute;
+    top: 50%;
+    right: .7143rem;
+    display: block;
+    background: url(http://m.kugou.com/v3/static/images/index/arrow_icon.png) no-repeat;
+    background-size: 100%;
+}
+.page-plist-index .panel-img-content-first {
+    padding-top: 1.4286rem;
+}
+.panel-img-content-sub {
+    color: #9b9b9b;
+    font-size: .6rem;
+}
+.icon-music {
+    width: .6rem;
+    height: .6rem;
+    margin-top: .10714rem;
+    margin-right: .2857rem;
+    display: inline-block;
+    background: url(http://m.kugou.com/v3/static/images/index/icon_music.png) no-repeat;
+    background-size: 100%;
+}
+.panel-img-content-first {
+    padding-top: 1.4286rem;
+}
+.list-panel-img-content{line-height: 1rem}
+.rank-info-hd {
+    width: 100%;
+    height: 9.5rem;
+    position: relative;
+    overflow: hidden;
+}
+.rank-info-time {
+    width: 100%;
+    height: 2.8rem;
+    background: -webkit-linear-gradient(bottom,rgba(0,0,0,.6),rgba(0,0,0,0));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.rank-info-hd span {
+    position: absolute;
+    bottom: 1.25rem;
+    left: 1.07143rem;
+    color: #fafff2;
+    font-size: .6rem;
+}
+.panel-songslist {
+    padding-left: .7143rem;
+}
+.panel-songslist-item {
+    width: 100%;
+    height: 3rem;
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+    display: table;
+}
+
+.panel-songs-item-download {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2.5rem;
+    height: 100%;
+    cursor: pointer;
+    text-align: center;
+}
+.panel-songs-item-download i {
+    width: 1rem;
+    height: 1rem;
+    margin-top: 1rem;
+    display: inline-block;
+    background: url(http://m.kugou.com/v3/static/images/index/download_icon_2.png) no-repeat;
+    background-size: 100%;
+}
+.top-goback {
+    width: 100%;
+    background: -webkit-linear-gradient(top,rgba(0,0,0,.6),rgba(0,0,0,0));
+    position: relative;
+    text-align: center;
+    color: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.page-title {
+    height: 2rem;
+    line-height: 2rem;
+    font-size: .7rem;
+}
+.goback {
+    width: 1.1429rem;
+    height: 1.8031rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    cursor: pointer;
+}
+.goback i {
+    width: .5rem;
+    height: 1.42857rem;
+    margin-top: .687265rem;
+    display: inline-block;
+    background: url(http://m.kugou.com/v3/static/images/index/goback_1.png) no-repeat;
+    background-size: 100%;
+}
+.panel-songs-item-num {
+    padding: 0rem  .3rem;
+    height: 1.0714rem;
+    line-height: 1.0714rem;
+    border-radius: .3rem;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -.5357rem;
+    text-align: center;
+    font-size: .5rem;
+    color: #999;
+    display: inline-block;
+}
+.panel-songs-item-num.one {
+    background: #e80000;
+    color: #fff;
+}
+.panel-songs-item-num.two {
+    background: #ff7200;
+    color: #fff;
+}
+.panel-songs-item-num.three {
+    background: #f8b300;
+    color: #fff;
+}
+.intro-box {
+    width: 100%;
+    height: 2.25rem;
+    line-height: 2;
+    padding: .5357rem 2.67857rem .5357rem .8929rem;
+    box-shadow: 0 0.1785rem 0.1785rem 0 #f4f4f4;
+    position: relative;
+    overflow: hidden;
+    font-size: .7rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.intro-icon-box {
+    width: 2.1429rem;
+    height: 2rem;
+    line-height: 2.1429rem;
+    position: absolute;
+    top: .25rem;
+    right: .1786rem;
+    text-align: center;
+    cursor: pointer;
+}
+.intro-icon {
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    vertical-align: text-bottom;
+    background: url(http://m.kugou.com/v3/static/images/index/close_icon.png) no-repeat;
+    background-size: 100%;
+}
+.introboxmore{height: auto;}
+.introboxmore .intro-icon {
+    background: url(http://m.kugou.com/v3/static/images/index/open_icon.png) no-repeat;
+    background-size: 100%;
+}
+.top-goback-bg {
+    box-shadow: 0 0.1785rem 0.1785rem 0 #f4f4f4;
+    color: #333;
+    background: #fff;
+}
+.top-goback-bg .goback i {
+    background: url(http://m.kugou.com/v3/static/images/index/goback.png) no-repeat;
+    background-size: 100%;
+}
+.singer-img-list li a {
+    padding-left: 4.35rem;
+}
+.singer-img-list .panel-img-left {
+    width: 3.3929rem;
+    height: 3.3929rem;
+}
+.singer-img-list .panel-img-content {
+    min-height: 3.3929rem;
+    line-height: 3.3929rem;
+}
+.panel-songs-item-name {
+    width: 100%;
+    padding-right: 2.657rem;
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: .3571rem;
+    cursor: pointer;
+    font-size: .7rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.panel-songslist-rank .panel-songs-item-name {
+    padding-left: 1.3rem;
+}
+.img-box {
+    width: 100%;
+    height: 12rem;
+    position: relative;
+    overflow: hidden;
+    margin-top: -2rem
+}
+
+.ft-player {
+    width: 100%;
+    height: 4.2143rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.9);
+    color: #fff;
+    font-size: 0;
+
+}
+.ft-go-info {
+    
+    
+    display: block;
+}
+.ft-left {
+    width: 3.75rem;
+    height: 3.75rem;
+    margin: .2143rem .535rem .2143rem .2143rem;
+}
+.ft-left img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.ft-center, .ft-left {
+    display: inline-block;
+    vertical-align: middle;
+}
+.ft-desc {
+    width: 100%;
+    line-height: 1.7;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: .8571rem;
+    color: #fff;
+}
+
+
+.ft-sub-desc {
+    line-height: 1.3;
+    font-size: .7143rem;
+    color: #888;
+}
+.ft-right {
+    position: absolute;
+    top: 1.3rem;
+    right: .7rem;
+}
+.btnPlay {
+    background: url(http://m.kugou.com/v3/static/images/index/play_icon.png) no-repeat;
+    background-size: 100%;
+}
+.btnPause {
+    background: url(http://m.kugou.com/v3/static/images/index/pause_icon.png) no-repeat;
+    background-size: 100%;
+}
+.btn-next {
+    background: url(http://m.kugou.com/v3/static/images/index/next_icon.png) no-repeat;
+    background-size: 100%;
+}
+.ft-icon-download {
+    background: url(http://m.kugou.com/v3/static/images/index/download_icon.png) no-repeat;
+    background-size: 100%;
+}
+.btn-loading, .btn-next, .btnPause, .btnPlay, .ft-icon-download {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: .5rem;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.panel-play {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow-y: auto;
+}
+.bg-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(http://m.kugou.com/v3/static/images/index/logo_kugou.png) no-repeat center center;
+    background-size: cover;
+
+    filter: blur(5px);
+}
+.play-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.6);
+}
+.panel-play-bd {
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 2.5rem;
+    position: relative;
+}
+.panel-play-img-box {
+    width: 8em;
+    height: 8rem;
+    margin: 1.4286rem auto 0;
+}
+.panel-play-lrc-box {
+    margin-top: .8928rem;
+    height: 3.8rem;
+    overflow: hidden;
+    text-align: center;
+    color: #afabac;
+}
+.panel-play-lrc {
+    height: 3.8rem;
+    overflow: hidden;
+}
+.panel-play-lrc {
+    height: 3.8rem;
+    overflow: hidden;
+}
+.panel-play-lrc-box p {
+    width: 100%;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    vertical-align: top;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: .7rem;
+}
+.panel-play-lrc-box p.current {
+    color:#f60
+}
+.time-wrap {
+    width: 100%;
+    padding: 1.5rem .7143rem;
+    display:flex;
+    box-flex: 1;
+    box-align: center;
+    box-pack: justify;
+    box-orient: horizontal;
+    box-sizing: border-box;
+}
+.time, .timeshow {
+    font-size: .6428rem;
+    color: #dcdcdc;
+}
+.progress-wrap {
+    height: .1785rem;
+    margin: 0 .5357rem;
+    background: #232228;
+    position: relative;
+    box-flex: 1;
+    z-index: 100;
+    width: 100%;
+    margin-top: 0.3rem;
+}
+.progress-bar {
+    width: 100%;
+    height: 100%;
+}
+.preview-progress, .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 0;
+    height: 100%;
+}
+.preview-progress {
+    background: #6c6b70;
+}
+.preview-progress, .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 0;
+    height: 100%;
+}
+.progress {
+    background: #3195fd;
+}
+.progress span {
+    position: absolute;
+    top: 50%;
+    right: -.4rem;
+    margin-top: -.3572rem;
+    width: .7143rem;
+    height: .7143rem;
+    display: block;
+    background: #3195fd;
+    border-radius: 100%;
+}
+.play-operate {
+    margin: 0 auto;
+    font-size: 0;
+    text-align: center;
+}
+.play-operate .btn-download, .play-operate .btn-next, .play-operate .btn-prev {
+    width: 2.3214rem;
+    height: 2.4rem;
+    margin: 0 .8929rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+.play-operate .btn-prev {
+    background: url(http://m.kugou.com/v3/static/images/index/play_prev.png) no-repeat;
+    background-size: 100%;
+}
+.play-operate .btn-play {
+    background: url(http://m.kugou.com/v3/static/images/index/play_play.png) no-repeat;
+    background-size: 100%;
+}
+.play-operate .btn-next {
+    background: url(http://m.kugou.com/v3/static/images/index/play_next.png) no-repeat;
+    background-size: 100%;
+}
+.play-operate .btn-pause {
+    background: url(http://m.kugou.com/v3/static/images/index/play_pause.png) no-repeat;
+    background-size: 100%;
+}
+.play-operate .btn-loading, .play-operate .btn-pause, .play-operate .btn-play {
+    width: 3.2143rem;
+    height: 3.2143rem;
+    margin: 0 .8929rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+.top-hd {
+    width: 100%;
+    padding-top: .0357rem;
+    height:2rem;
+    line-height: 2rem;
+    background: #2ca2f9;
+    position: relative;
+}
+.top-hd .logo {
+    width: 5rem;
+    height: 1.3rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: .7143rem;
+    background: url(http://m.kugou.com/v3/static/images/index/logo.png) no-repeat;
+    background-size: 100%;
+    border-bottom: none
+}
+.top-hd .btn-search {
+    width: 1rem;
+    height: 1rem;
+    background: url(http://m.kugou.com/v3/static/images/index/search.png) no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: .5rem;
+    right: .7143rem;
+    cursor: pointer;
+}
