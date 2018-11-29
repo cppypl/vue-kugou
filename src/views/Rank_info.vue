@@ -45,11 +45,12 @@ export default {
       fanhui(){
          this.$router.push('/rank')
          
-      },
-      playMusic(hash){
-            this.$store.dispatch('playMuisc',hash)
+        },
+        playMusic(index){
+            this.$store.dispatch('playMuisc',index)
+            KrcFn()
         }
-  },
+    },
 
   computed: {
     getaddTime() {

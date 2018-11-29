@@ -21,6 +21,17 @@ module.exports = {
         "headers":{
           "User-Agent": "Mozilla/5.0 (Linux; U; Android 2.3.7; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1"
         }
+      },
+      "/kugou":{
+        target:"http://mobilecdn.kugou.com",
+        "secure":false,
+        "changeOrigin":true,
+        "pathRewrite":{
+          "^/kugou":""  //替换proxy的后面增加
+        },
+        "headers":{
+          "User-Agent": "Mozilla/5.0 (Linux; U; Android 2.3.7; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1"
+        }
       }
     },
 

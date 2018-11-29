@@ -27,4 +27,22 @@ let vm=new Vue({
   store,
   components: { App },
   template: '<App/>'
+  
 })
+
+function KrcFn(){
+  clearInterval(timer)
+  timer=setInterval(()=>{
+      let currentTime=document.getElementById('audio').currentTime;
+      console.log(currentTime);
+      this.$store.commit('changekrctime',currentTime)
+      
+      
+      if(document.getElementById('audio').paused){
+          console.log('歌停止了')
+          clearInterval(timer)
+      }
+      console.log(document.querySelector('.current').offsetTop)
+      document.querySelector('#playLrc').style.top=-document.querySelector('.current').offsetTop+'px'
+  },1000)
+}

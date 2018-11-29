@@ -5,7 +5,7 @@ import { stat } from 'fs';
 
 Vue.use(Vuex)
 
-
+let timer;
 const store = new Vuex.Store({
     // ...
     state:{
@@ -17,7 +17,9 @@ const store = new Vuex.Store({
         singerImg:'',
         playStatus:true,
         nowPageSingList:[],
-        muiscIndex:0
+        muiscIndex:0,
+        krc:'',
+        krctime:''
     },
     mutations:{
         showIndexList(state,data){
@@ -40,10 +42,17 @@ const store = new Vuex.Store({
         changeNowPageSingList(state,val){
             state.nowPageSingList=val
         },
+        changeKrc(state,val){
+            state.krc=val
+        },
+        changekrctime(state,val){
+            state.krctime=val
+        }
         
     },
     actions:{
         playMuisc(context,index){
+            
             axios.get('/proxy/app/i/getSongInfo.php?cmd=playInfo&hash='+context.state.nowPageSingList[index]+'&from=mkugou')
             .then((res)=>{
                
@@ -56,6 +65,25 @@ const store = new Vuex.Store({
                 }
                 context.commit('changePlayerDate',obj)///虽然ajax请求回来了，但改值必须mutations
             })
+            axios.get('/proxy/app/i/krc.php?cmd=100&hash='+context.state.nowPageSingList[index]+'&timelength=103000&d=0.3427127003052546').then(res=>{
+                let medisArray=[];
+                res.data.split('\r\n').forEach(item=>{
+                    let t=item.substring(item.indexOf("[") + 1, item.indexOf("]"));
+
+                    medisArray.push({
+
+                        t: (t.split(":")[0] * 60 + parseFloat(t.split(":")[1])).toFixed(3),
+                        c: item.substring(item.indexOf("]") + 1, item.length)
+                    });
+
+                })
+                
+                context.commit('changeKrc',medisArray)//提交改变歌词
+            })
+           
+          
+            
+            
         },
         bofangNext(context){
             
@@ -77,6 +105,7 @@ const store = new Vuex.Store({
                 }
                 context.commit('changePlayerDate',obj)///虽然ajax请求回来了，但改值必须mutations
             })
+           
         },
         bofangPrev(context){
             let index=0;
@@ -97,7 +126,8 @@ const store = new Vuex.Store({
                 }
                 context.commit('changePlayerDate',obj)///虽然ajax请求回来了，但改值必须mutations
             })
-        }
+        },
+        
     }
 
 })

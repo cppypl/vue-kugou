@@ -11,6 +11,7 @@ import Singer_list from '@/views/Singer_list'
 import Singer_list_info from '@/views/Singer_list_info'
 import Player from '@/components/Player'
 import Nav from '@/components/Nav'
+import Search from '@/views/Search'
 
 
 Vue.use(Router)
@@ -80,6 +81,14 @@ export default new Router({
       components:{
         player:Player,
         default: Singer_list_info
+      }
+
+    },
+    {
+      path:'/search/index/:id?',
+      components:{
+        player:Player,
+        default: Search
       }
 
     },

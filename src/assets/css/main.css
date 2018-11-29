@@ -411,10 +411,14 @@
     overflow: hidden;
     text-align: center;
     color: #afabac;
+    position: relative;
 }
 .panel-play-lrc {
     height: 3.8rem;
+    position: absolute;
+    width: 100%;
     overflow: hidden;
+    top:0
 }
 .panel-play-lrc {
     height: 3.8rem;
@@ -557,3 +561,81 @@
     right: .7143rem;
     cursor: pointer;
 }
+.hot-search-hd {
+    height: 1.8571rem;
+    line-height: 1.8571rem;
+    padding-left: .8929rem;
+    border-bottom: 1px solid #ccc;
+    font-size: .5571rem;
+    color: #2ca3f5;
+}
+.hot-search-list a {
+    height: 2.5714rem;
+    line-height: 2.5714rem;
+    border-bottom: 1px solid #e5e5e5;
+    display: block;
+    color: #333;
+    font-size: .7rem;
+    text-indent: .1786rem;
+    position: relative;
+}
+
+
+.hot-search-list {
+    margin-left: .7143rem;
+    overflow: scroll;
+}
+.search-box {
+    padding: .7143rem;
+    background: #fbfbfb;
+}
+.search-icon {
+    width: 1rem;
+    height: 1.9285rem;
+    display: block;
+    position: absolute;
+    top: 0.1rem;
+    left: .3714rem;
+    background: url(http://m.kugou.com/v3/static/images/index/search_icon.png) no-repeat;
+    background-size: 100%;
+}
+.search-keyword {
+    width: 70%;
+    
+    margin-right: 3%;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    font-size: .7rem;
+    height:1.8rem;
+    line-height:1.8rem;
+    text-indent: 1.5rem
+}
+.search-btn {
+    width: 24%;
+    height:1.8rem;
+    line-height:1.8rem;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: .7rem;
+    text-align: center;
+    background: #2ba2fa;
+    color: #fff;
+}
+
+.search-form-box{
+    position: relative;
+    font-size: 0;
+}
+.search-result-hd{
+    height: 1.5714rem;
+    line-height: 1.5714rem;
+    background: #e6e6e6;
+    padding-left: .9rem;
+    font-size: .5857rem;
+    color: #5d5d5d;
+}
+.ft-center{width: 8rem;}

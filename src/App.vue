@@ -3,7 +3,7 @@
   <div id="app" style="width:100%" > 
       <div class="top-hd">
         <router-link class="logo" to="/" exact=""></router-link>
-        <router-link to="/search" class="btn-search" ></router-link>
+        <router-link to="/search/index" class="btn-search" style="    border-bottom: none;"></router-link>
     </div>
 
 

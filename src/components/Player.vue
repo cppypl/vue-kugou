@@ -26,7 +26,9 @@
                     <img :src="$store.state.singerImg" width="100%" class="js-ftImg">
                 </div>
                 <div class="panel-play-lrc-box">
-                    <div class="panel-play-lrc" id="playLrc" style="height: auto;"><p>我们总是在人前</p><p>强撑着愉悦的笑容</p><p>累了不敢多言痛不敢倾诉</p><p>为了生活辛苦忙碌</p><p>我们总是在背后</p><p>咀嚼着难耐的心痛</p><p>肩上有着不可推卸的责任</p><p>为了幸福默默付出</p><p>朋友啊朋友 我们都 一样</p><p>都是一个普普通通的人</p><p>汗水流在谁的脸上</p><p>谁就会知道心酸在泛滥</p><p>朋友啊朋友 我们都 一样</p><p>都是一个普普通通的人</p><p>压力扛在谁的肩上</p><p>谁就会懂得生存的艰难</p><p>我们总是在背后</p><p>咀嚼着难耐的心痛</p><p>肩上有着不可推卸的责任</p><p>为了幸福默默付出</p><p>朋友啊朋友 我们都 一样</p><p>都是一个普普通通的人</p><p>汗水流在谁的脸上</p><p>谁就会知道心酸在泛滥</p><p>朋友啊朋友 我们都 一样</p><p>都是一个普普通通的人</p><p>压力扛在谁的肩上</p><p>谁就会懂得生存的艰难</p></div>
+                    <div class="panel-play-lrc" id="playLrc" style="height: auto;">
+                        <p v-for="item,index in $store.state.krc" :class="{current:$store.state.krctime>item.t && $store.state.krctime<$store.state.krc[index+1].t}">{{item.c}}</p>
+                    </div>
                 </div>
                 <div class="time-wrap" id="timeWrap">
                     <div class="timeshow" id="timeshow">00:30</div>
@@ -55,7 +57,7 @@
                         </div>
                         <div class="ft-center">
                             <p class="ft-desc js-ftSongName" id="ftSongName">{{$store.state.playData.songName}}</p>
-                            <p class="ft-sub-desc js-ftUserName" id="ftUserName">{{$store.state.playData.singerName}}</p>
+                            <p class="ft-sub-desc js-ftUserName" id="ftUserName">{{$store.state.playData.choricSinger}}</p>
                         </div>
                     </a>
                     <div class="ft-right">
@@ -71,6 +73,7 @@
 </template>
 
 <script>
+
 export default {
     data(){
         return{
@@ -83,17 +86,27 @@ export default {
         }
     },
     methods:{
+       
         bofang(){
-
+            let timer;
+            clearInterval(timer)
             let audio=document.getElementById('audio');
+            
              if(audio.paused){
+                 
                 audio.play()
                 this.$store.commit('bofang',true) 
+                
+                clearInterval(timer)
+               
+                
             }else{
                 audio.pause()
                 this.$store.commit('bofang',false) 
+                
             }
-          
+            
+            
         },
         bofangNext(){
             this.$store.dispatch('bofangNext') 
@@ -103,6 +116,7 @@ export default {
         }
     },
 }
+
 </script>
 
 <style>
