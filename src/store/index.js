@@ -21,6 +21,14 @@ const store = new Vuex.Store({
         krc:'',
         krctime:''
     },
+    getters: {
+        getBanner(state){
+            return state.banner
+        },
+        playData2(state){
+            return state.playData
+        }
+    },
     mutations:{
         showIndexList(state,data){
             state.newSingList=data.data

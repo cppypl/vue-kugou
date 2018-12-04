@@ -9,7 +9,7 @@
             <!--start top-fixed-->
             <div class="top-fixed">
 
-                
+               
                 <!--start top-nav -->
                 <div class="top-goback">
                     <p class="page-title js-ftSongName">{{$store.state.playData.songName}}</p>
@@ -20,7 +20,6 @@
                 <!--end top-nav -->
             </div>
             <!--end top-fixed-->
-
             <div class="panel-play-bd" id="panelPlayBd">
                 <div class="panel-play-img-box">
                     <img :src="$store.state.singerImg" width="100%" class="js-ftImg">
@@ -74,6 +73,8 @@
 
 <script>
 
+import {mapGetters} from 'vuex'
+
 export default {
     data(){
         return{
@@ -84,6 +85,17 @@ export default {
             playStatus:true,
             showPanelPlay:false
         }
+    },
+    created(){
+
+    },
+    mounted(){
+        console.log(this.$el)
+        console.log(this.getBanner)
+        console.log(this.playData2)
+    },
+    computed: {
+        ...mapGetters(['getBanner', 'playData2'])
     },
     methods:{
        

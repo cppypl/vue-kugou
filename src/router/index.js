@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Home from '@/views/Home'
 import NotFind from '@/views/404'
 import Singer from '@/views/Singer'
-import Rank from '@/views/Rank'
+// import Rank from '@/views/Rank'
 import List from '@/views/List'
 import Rank_info from '@/views/Rank_info'
 import Plist_info from '@/views/Plist_info'
@@ -22,7 +22,7 @@ export default new Router({
     {
       path: '/',
       components:{
-        player:Player,
+        player: Player,
         nav:Nav,
         default: Home
       }
@@ -30,9 +30,9 @@ export default new Router({
     {
       path: '/rank',
       components:{
-        player:Player,
+        player: resolve => require(['@/views/Rank.vue'], resolve),
         nav:Nav,
-        default: Rank
+        // default: Rank
       }
       
     },
